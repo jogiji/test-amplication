@@ -17,3 +17,12 @@ model User {
   updatedAt DateTime @updatedAt
   username  String   @unique
 }
+
+model Parking {
+  createdAt     DateTime @default(now())
+  endTime       DateTime
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  startTime     DateTime
+  updatedAt     DateTime @updatedAt
+  vehicleNumber String
+}
